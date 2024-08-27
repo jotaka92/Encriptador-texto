@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #F3F5FC;
+    --secondary-color: #0A3871;
+    --tertiary-color: #FFFFFF;
+    --font-family: 'Inter', sans-serif;
+    --button-radius: 24px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.input-section,
+.output-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px;
+}
+
+.input-textarea, 
+.output-textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    resize: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: var(--button-radius);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+.button--primary {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+.button--primary:hover {
+    background-color: #072c51;
+}
+
+.button--secondary {
+    background-color: #D8DFE8;
+    color: var(--secondary-color);
+}
+
+.button--secondary:hover {
+    background-color: #b0bbca;
+}
+
+.button--copy {
+    background-color: #28a745;
+    color: var(--tertiary-color);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button--copy:hover {
+    background-color: #218838;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.warning__img {
+    width: 20px;
+    height: 20px;
+}
+
+.warning__text {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.no-message, 
+.output-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.no-message__text, 
+.output-message__text {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.no-message__subtext {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.output-message {
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    border-radius: var(--button-radius);
+    box-shadow: 0px 0px 5px #bdbbbb;
+    width: 100%;
+}
+
+/* Estilos generales para pantallas grandes (desktop) */
+body {
+    font-size: 16px;
+}
+
+/* Para tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .presentation__content__input-textarea {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+        font-size: 1.5rem;
+    }
+
+    .presentation__content__buttons__encrypt,
+    .presentation__content__buttons__decrypt {
+        width: 45%;
+        height: 60px;
+    }
+
+    .presentation__content__messages {
+        width: 80%;
+        height: 400px;
+        margin: 5% 10%;
+    }
+}
+
+/* Para móviles (pantallas de menos de 768px) */
+@media (max-width: 767px) {
+    .presentation__content__input-textarea {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+        font-size: 1.2rem;
+    }
+
+    .presentation__content__buttons__encrypt,
+    .presentation__content__buttons__decrypt {
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .presentation__content__messages {
+        width: 90%;
+        height: auto;
+        margin: 5% 5%;
+    }
+    
+    .presentation__content__warning__p {
+        font-size: 0.65rem;
+    }
+}
+
